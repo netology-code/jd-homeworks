@@ -1,6 +1,6 @@
 # 3. Домашние задания по курсу «Java Core II»
 
-## Блок 1. Stream API, generics
+## Блок 1. Stream API, Generics
 
 1.1 Generics в коллекциях и методах
 
