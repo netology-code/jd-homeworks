@@ -3,63 +3,67 @@
 ## Описание
 У дженерик класса может быть несколько параметров. 
 
-Расширьте созданный в первой задача типизированный класс `SimpleGeneric`. Помимо параметра `V` добавьте параметр `U`:
+Расширьте созданный в первой задача типизированный класс `Box`. Помимо параметра `T` добавьте параметр `K`:
 ```java
-class SimpleGeneric<U,V>{ 
+class Box<K,T>{ 
 
 }
 ```
 
-Теперь класс `SimpleGeneric` будет обладать двумя полями:
+Теперь класс `Box` будет обладать двумя полями:
 ```java
-private U objUreff;
-private V objVreff;
+private K key;
+private T obj;
 ```
 
 Их значение могут быть получены через конструктор класса. Конструктор класса будет выглядеть следующим образом:
 ```java
-public SimpleGeneric(U objU, V objV){
-        this.objUreff = objU;
-        this.objVreff = objV;
-    }
+public Box(K key, T obj){
+    this.key = key;
+    this.obj = obj;
+}
 ```
 
-Для работы с переменными класса добавьте методы `get` и `set`. Метод `printType()` будет выводить в консоль типы объектов класса `SimpleGeneric`:
+Для работы с переменными класса добавьте методы `get` и `set`. Метод `toString()` будет выводить значения и типы объектов класса `Box`:
 ```java
-public void printType() {
-    System.out.println("U Type: " + this.objUreff.getClass().getName());
-    System.out.println("V Type: " + this.objVreff.getClass().getName());
+@Override
+public String toString() {
+    return "Box{" +
+            "key=" + key +
+            "; keyType=" + key.getClass().getName() +
+            ", obj=" + obj +
+            "; objType=" + obj.getClass().getName() +
+            '}';
 }
 ```
 
 ## Реализация
-Создадим несколько экземпляров класса `SimpleGeneric`, используя при этом различные типы:
+Создадим несколько экземпляров класса `Box`, используя при этом различные типы:
 ```java
 public class Main {
     public static void main(String a[]) {
-        SimpleGen<String, Integer> sample_1 = new SimpleGen<>("Нетология", 1);
-        sample_1.printTypes();
-
-        SimpleGen<Boolean, Double> sample_2 = new SimpleGen<>(true, 1.1);
-        sample_2.printTypes();
+        // параметризируем класс типом String для ключа и значения
+        Box<String, String> sample_1 = new Box<>("имя", "Нетология");
+        System.out.println(sample_1);
+        // параметризируем класс типом Integer для ключа и Boolean для значения
+        Box<Integer, Boolean> sample_2 = new Box<>(1, Boolean.TRUE);
+        System.out.println(sample_2);
     }
 }
 ```
 
 В результате выполнения программы, в консоле увидим следующие строки:
 ```
-U Type: java.lang.String
-V Type: java.lang.Integer
-U Type: java.lang.Boolean
-V Type: java.lang.Double
+Box{key=имя; keyType=java.lang.String, obj=Нетология; objType=java.lang.String}
+Box{key=1; keyType=java.lang.Integer, obj=true; objType=java.lang.Boolean}
 ```
 
-Теперь создадим `ArrayList` и типизируем его для хранения объектов типа `SimpleGen<String, Integer>`:
+Теперь создадим `ArrayList` и типизируем его для хранения объектов типа `Box<String, Integer>`:
 
 ``
-ArrayList<SimpleGen<String, Integer>> list_1 = new ArrayList<>();
+ArrayList<Box<String, Integer>> list_1 = new ArrayList<>();
 ``
 
 Попробуйте добавить в него объекты `sample_1` и `sample_2`. Однако Вы столкнетесь с ошибкой. С помощью комментария в коде, объясните, в чем заключается ошибка и по какой причине она возникла.
 
-Исправьте ошибку, создав дополнительный типизированный `ArrayList` и добавив в него объект `sample`.
+Исправьте ошибку, создав дополнительный типизированный `ArrayList` и добавив в него оставшийся объект `sample`.

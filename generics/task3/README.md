@@ -7,7 +7,7 @@
 ```java
 class Fruit {
     public void printClass() {
-        System.out.println("I am in super class Fruit");
+        System.out.println("I am super class Fruit");
     }
 }
 ```
@@ -17,14 +17,14 @@ class Fruit {
 class Apple extends Fruit {
     @Override
     public void printClass() {
-        System.out.println("I am in sub class Apple");
+        System.out.println("I am sub class Apple");
     }
 }
 
 class Banana extends Fruit {
     @Override
     public void printClass() {
-        System.out.println("I am in sub class Banana");
+        System.out.println("I am sub class Banana");
     }
 }
 ```
@@ -40,17 +40,8 @@ class Cabbage {
 
 Теперь, создайте дженерик коробку, в которую можно будет положить только фрукты. Реализуется это путем указания, от какого класса может быть наследован параметр `T`:
 ```java
-class Box<T extends Fruit> {
-
-    private T fruit;
-
-    public Box(T fruit) {
-        this.fruit = fruit;
-    }
-
-    public void doRunTest() {
-        fruit.printClass();
-    }
+class Box<K, T extends Fruit> {
+    // Реализация класса коробки из предыдущего задания
 }
 ```
 
@@ -59,29 +50,29 @@ class Box<T extends Fruit> {
 ```java
 public class Main {
     public static void main(String a[]) {
-        Box<Banana> bananaBox = new Box<>(new Banana());
-        bananaBox.doRunTest();
+        Box<String, Banana> bananaBox = new Box<>("banana", new Banana());
+        bananaBox.getObj().printClass();
 
-        Box<Apple> appleBox = new Box<>(new Apple());
-        appleBox.doRunTest();
+        Box<String, Apple> appleBox = new Box<>("apple", new Apple());
+        appleBox.getObj().printClass();
 
-        Box<Fruit> fruitBox = new Box<>(new Fruit());
-        fruitBox.doRunTest();
+        Box<String, Fruit> fruitBox = new Box<>("fruit", new Fruit());
+        fruitBox.getObj().printClass();
 
-        Box<Cabbage> cabbageBox = new Box<>(new Cabbage());
-        cabbageBox.doRunTest();
+        Box<String, Cabbage> cabbageBox = new Box<>("cabbage", new Cabbage());
+        cabbageBox.getObj().printClass();
     }
 }
 ```
 
 Обратите внимание, что в коде выше есть ошибка. Найдите ошибку и с помощью комментария объясните, по какой причине она возникла.
 
-Создайте вторую коробку, которая бы хранила в себе только полезные овощи.
+Исправьте ошибку. По аналогии с созданной коробкой для фруктов, создайте вторую коробку `VegetableBox`, которая бы хранила в себе только полезные овощи `Vegetable` и положите в нее полезную капусту.
 
 В случае успешного выполнения задания, Вы увидите в консоле следующие строки:
 ```
-I am in sub class Banana
-I am in sub class Apple
-I am in super class Fruit
+I am sub class Banana
+I am sub class Apple
+I am super class Fruit
 I am Cabbage
 ```
