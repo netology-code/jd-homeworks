@@ -2,7 +2,7 @@
 
 ## Блок 1. Stream API, Generics
 
-1.1 Generics в коллекциях и методах
+1.1 [Generics в коллекциях и методах](./generics/README.md)
 
 1.2 [Лямбда-выражения и функциональные интерфейсы](./lambda/README.md)
 
