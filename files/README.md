@@ -4,7 +4,7 @@
 
 1. [Установка](./task1/README.md);	
 2. [Сохранение](./task2/README.md);
-3. [Загрузка](./task3/REAMDE.md).
+3. [Загрузка](./task3/README.md).
 
 =======
 
