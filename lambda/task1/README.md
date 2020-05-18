@@ -21,7 +21,7 @@ UnaryOperator<Integer> abs = x -> x > 0 ? x : x * -1;
 ```java
 Predicate<Integer> isPositive = x -> x > 0;
 ```
-Добавьте переменную типа `Consumer` для вывода числа в консолько. Используте для этого ссылку на статический метод println():
+Добавьте переменную типа `Consumer` для вывода числа в консоль. Используте для этого ссылку на статический метод println():
 ```java
 Consumer<Integer> println = System.out::println;
 ```
