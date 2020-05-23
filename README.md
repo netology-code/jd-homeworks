@@ -12,7 +12,7 @@
 
 1.5 Сборка проектов. Maven и Gradle
 
-1.6 Чтение файлов java, txt, csv, json, xml. Работа с jacksonMapper, монада Optional
+1.6 [Работа с файлами CSV, XML, JSON](./special_files/README.md)
 
 
 # 4. Домашние задания по курсу «Шаблоны проектирования»
