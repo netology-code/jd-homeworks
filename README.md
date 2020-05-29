@@ -1,4 +1,4 @@
-# 3. Домашние задания по курсу «Java Core II»
+# 3. Домашние задания по курсу «Java Core»
 
 ## Блок 1. Stream API, Generics
 
