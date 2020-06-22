@@ -10,7 +10,7 @@
 
 1.4 [Потоки ввода-вывода. Работа с файлами. Сериализация](./files/README.md)
 
-1.5 Сборка проектов. Maven и Gradle
+1.5 [Сборка проектов. Maven и Gradle](./builders/README.md)
 
 1.6 [Работа с файлами CSV, XML, JSON](./special_files/README.md)
 
