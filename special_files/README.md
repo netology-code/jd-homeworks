@@ -4,7 +4,7 @@
 
 1. [CSV - JSON парсер](./task1/README.md);	
 2. [XML - JSON парсер](./task2/README.md);
-3. [JSON парсер](./task3/README.md).
+3. [JSON парсер](./task3/README.md) (задание со звездочкой *).
 
 =======
 
