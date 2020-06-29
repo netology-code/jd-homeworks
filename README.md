@@ -22,7 +22,7 @@
 
 ## Блок 3. Работа с сетью
 
-3.1 Основы работы с сетью. Модель OSI
+3.1 [Основы работы с сетью. Модель OSI](https://github.com/netology-code/jd-homeworks/tree/master/network)
 
 3.2 HTTP/HTTPs, TCP, UPD. Вызов удаленных серверов, анализ данных, парсинг
 
