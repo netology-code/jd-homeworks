@@ -43,11 +43,11 @@ public String toString() {
 public class Main {
     public static void main(String a[]) {
         // параметризируем класс типом String для ключа и значения
-        Box<String, String> sample_1 = new Box<>("имя", "Нетология");
-        System.out.println(sample_1);
+        Box<String, String> sample1 = new Box<>("имя", "Нетология");
+        System.out.println(sample1);
         // параметризируем класс типом Integer для ключа и Boolean для значения
-        Box<Integer, Boolean> sample_2 = new Box<>(1, Boolean.TRUE);
-        System.out.println(sample_2);
+        Box<Integer, Boolean> sample2 = new Box<>(1, Boolean.TRUE);
+        System.out.println(sample2);
     }
 }
 ```
@@ -61,9 +61,9 @@ Box{key=1; keyType=java.lang.Integer, obj=true; objType=java.lang.Boolean}
 Теперь создадим `ArrayList` и типизируем его для хранения объектов типа `Box<String, Integer>`:
 
 ``
-ArrayList<Box<String, Integer>> list_1 = new ArrayList<>();
+ArrayList<Box<String, Integer>> list1 = new ArrayList<>();
 ``
 
-Попробуйте добавить в него объекты `sample_1` и `sample_2`. Однако Вы столкнетесь с ошибкой. С помощью комментария в коде объясните, в чем заключается ошибка и по какой причине она возникла.
+Попробуйте добавить в него объекты `sample1` и `sample2`. Однако Вы столкнетесь с ошибкой. С помощью комментария в коде объясните, в чем заключается ошибка и по какой причине она возникла.
 
 Исправьте ошибку, создав дополнительный типизированный `ArrayList` и добавив в него оставшийся объект `sample`.

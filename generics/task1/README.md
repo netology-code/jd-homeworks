@@ -49,14 +49,14 @@ public String toString() {
 public class Main {
     public static void main(String a[]) {
         // параметризируем класс типом String
-        Box<String> sample_1 = new Box<>("Нетология");
-        System.out.println(sample_1);
+        Box<String> sample1 = new Box<>("Нетология");
+        System.out.println(sample1);
         // параметризируем класс типом Integer
-        Box<String> sample_2 = new Box<>(1);
-        System.out.println(sample_2);
+        Box<String> sample2 = new Box<>(1);
+        System.out.println(sample2);
         // параметризируем класс типом Boolean
-        Box<Boolean> sample_3 = new Box<>(Boolean.TRUE);
-        System.out.println(sample_3);
+        Box<Boolean> sample3 = new Box<>(Boolean.TRUE);
+        System.out.println(sample3);
     }
 }
 ```
