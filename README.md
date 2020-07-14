@@ -18,7 +18,7 @@
 
 2.1 [Тестирование кода и Unit-тесты](https://github.com/netology-code/jd-homeworks/tree/master/junit)
 
-2.2 [Mockito. Мокирование вызовов, Mock, Stub] (https://github.com/netology-code/jd-homeworks/tree/master/mocks)
+2.2 [Mockito. Мокирование вызовов, Mock, Stub](https://github.com/netology-code/jd-homeworks/tree/master/mocks)
 
 ## Блок 3. Работа с сетью
 
