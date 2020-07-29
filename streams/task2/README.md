@@ -11,21 +11,38 @@ public enum Sex {
     WOMEN
 }
 ```
-2. `People`, содержащий информацию об имени, возрасте и поле человека:
+2. `Education`, содержащий типы образования:
 ```java
-public class People {
-    private final String name;
-    private final Integer age;
-    private final Sex sex;
+public enum Education {
+    ELEMENTARY,
+    SECONDARY,
+    FURTHER,
+    HIGHER
+}
+```
+3. `Person`, содержащий информацию об имени, возрасте, поле и образовании человека:
+```java
+class Person {
+    private String name;
+    private String family;
+    private Integer age;
+    private Sex sex;
+    private Education education;
 
-    public People(String name, Integer age, Sex sex) {
+    public Person(String name, String family, int age, Sex sex, Education education) {
         this.name = name;
+        this.family = family;
         this.age = age;
         this.sex = sex;
+        this.education = education;
     }
 
     public String getName() {
         return name;
+    }
+
+    public String getFamily() {
+        return family;
     }
 
     public Integer getAge() {
@@ -36,37 +53,42 @@ public class People {
         return sex;
     }
 
+    public Education getEducation() {
+        return education;
+    }
+
     @Override
     public String toString() {
-        return "{" +
+        return "Person{" +
                 "name='" + name + '\'' +
+                ", family='" + family + '\'' +
                 ", age=" + age +
                 ", sex=" + sex +
+                ", education=" + education +
                 '}';
     }
 }
 ```
 
-Из коллеции объектов `People` необходимо:
-1. Выбрать мужчин-военнообязанных и вывести их в консоль.
-2. Найти средний возраст среди мужчин и вывести его в консоль.
-3. Найти кол-во потенциально работоспособных людей в выборке (т.е. от 18 лет и учитывая что женщины выходят на пенсию в 60 лет, а мужчины - в 65).
+Из коллеции объектов `Person` необходимо:
+1. Найти количество несовершеннолетних (т.е. людей младше 18 лет).
+2. Получить список фамилий призывников (т.е. мужчин от 18 и до 27 лет).
+3. Получить отсортированный по фамилии список потенциально работоспособных людей с высшим образованием в выборке (т.е. людей с высшим образованием от 18 до 60 лет для женщин и до 65 лет для мужчин).
 
 ## Реализация
-В классе `Main` в функции `main()` необходимо создать коллекцию экземпляров класса `People`:
+В классе `Main` в функции `main()` необходимо создать коллекцию экземпляров класса `Person`:
 ```java
- Collection<People> peoples = Arrays.asList(
-                new People("Вася", 16, Sex.MAN),
-                new People("Петя", 23, Sex.MAN),
-                new People("Елена", 42, Sex.WOMEN),
-                new People("Иван Иванович", 69, Sex.MAN)
-        );
+Collection<Person> persons = Arrays.asList(
+        new Person("Jack", "Evans", 16, Sex.MAN, Education.SECONDARY),
+        new Person("Connor", "Young", 23, Sex.MAN, Education.FURTHER),
+        new Person("Emily", "Harris", 42, Sex.WOMEN, Education.HIGHER),
+        new Person("Harry", "Wilson", 69, Sex.MAN, Education.HIGHER),
+        new Person("George", "Davies", 35, Sex.MAN, Education.FURTHER),
+        new Person("Samuel", "Adamson", 40, Sex.MAN, Education.HIGHER),
+        new Person("John", "Brown", 44, Sex.MAN, Education.HIGHER)
+);
 ```
-Из созданной коллекции `people` создайте стрим методом `stream()`, далее выберите мужчин-военнообязанных с помощью метода `filter()`, сохраните их в лист с помощью метода `collect()` и выведите полученный лист на экран. Аргументы для предложенных функций Вы должны определить сами.
-
-Далее найдидте средний возраст среди мужчин. В этом Вам помогут такие методы как: `stream()` для создания потока, `filter()` для фильтрации мужчин, `mapToInt()` позволит перейти от работы с объектами `People` к возрасту `Integer`, `average()` для расчета среднего значения и терминальная операция `getAsDouble()`, которая закроет стрим и получит из него переменную типа `Double`. Выведите результат в консоль.
-
-И на последок, определите кол-во потенциально работоспособных людей в выборке. В этом Вам помогут такие методы как `stream()`, `filter()` и терминальный оператор `count()`. Результат выведите в консоль.
-
-## Дополнительное задание(*)
-При определении среднего возраста среди мужчин, терминальная операция `getAsDouble()` может вернуть исключение, если в выборке у вас будут только женщины. С помощью комментария прошу Вас объяснить природу исключения, причины возникновения и возможные пути решения. Для этого Вам потребуется дополнительно прочитать про классы типа `Optional`. 
+Из созданной коллекции `persons` для каждого задания создавайте новый стрим методом `stream()` и далее применяйте к нему ряд промежуточных операций и одну терминальную:
+1. Для поиска несовершеннолетних используйте промежуточный метод `filter()` и терминальный метод `count()`.
+2. Для получения списка призывников потребуется применить несколько промежуточных методов `filter()`, а также для преобразования данных из `Person` в `String` (так как нужны только фамилии) используйте метод `map()`. Так как требуется получить список `List<String>` терминальным методом будет `collect(Collectors.toList())`.
+3. Для получения отсортированного по фамилии списка потенциально работоспособных людей с высшим образованием необходимо применить ряд промежуточных методов `filter()`, метод `sorted()` в который нужно будет положить компаратор по фамилиям `Comparator.comparing()`. Завершить стрим необходимо методом `collect()`.
