@@ -2,17 +2,15 @@
 
 ## Блок 1. Stream API, Generics
 
-1.1 [Generics в коллекциях и методах](./generics/README.md)
+1.1 [Лямбда-выражения и функциональные интерфейсы](./lambda/README.md)
 
-1.2 [Лямбда-выражения и функциональные интерфейсы](./lambda/README.md)
+1.2 [Stream API. Потоки, повторные вызовы, основные методы](./streams/README.md)
 
-1.3 [Stream API. Потоки, повторные вызовы, основные методы](./streams/README.md)
+1.3 [Потоки ввода-вывода. Работа с файлами. Сериализация](./files/README.md)
 
-1.4 [Потоки ввода-вывода. Работа с файлами. Сериализация](./files/README.md)
+1.4 [Сборка проектов. Maven и Gradle](./builders/README.md)
 
-1.5 [Сборка проектов. Maven и Gradle](./builders/README.md)
-
-1.6 [Работа с файлами CSV, XML, JSON](./special_files/README.md)
+1.5 [Работа с файлами CSV, XML, JSON](./special_files/README.md)
 
 ## Блок 2. Тестирование программы
 
