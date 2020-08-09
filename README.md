@@ -16,13 +16,13 @@
 
 2.1 [Тестирование кода и Unit-тесты](https://github.com/netology-code/jd-homeworks/tree/master/junit)
 
-2.2 [Mockito. Мокирование вызовов, Mock, Stub](https://github.com/netology-code/jd-homeworks/tree/master/mocks)
+2.2 [Mockito. Мокирование вызовов](https://github.com/netology-code/jd-homeworks/tree/master/mocks)
 
 ## Блок 3. Работа с сетью
 
 3.1 [Основы работы с сетью. Модель OSI](https://github.com/netology-code/jd-homeworks/tree/master/network)
 
-3.2 [HTTP/HTTPs, TCP, UPD. Вызов удаленных серверов, анализ данных, парсинг](https://github.com/netology-code/jd-homeworks/tree/master/http)
+3.2 [Протокол HTTP. Вызовы удаленных серверов](https://github.com/netology-code/jd-homeworks/tree/master/http)
 
 ## Блок 4. Структура JVM
 4.1 [JVM. Организация памяти, сборщики мусора, VisualVM](/jvm)
