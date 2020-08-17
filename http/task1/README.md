@@ -65,6 +65,6 @@ CloseableHttpClient httpClient = HttpClientBuilder.create()
 ```
 6. Создайте класс, в который будем преобразовывать json ответ от сервера;
 7. Преобразуйте json в список java объектов;
-8. Отфильтруйте список - например, средствами stream api, с помощью метода filter(value -> value.getUpvotes() != null);
+8. Отфильтруйте список - например, средствами stream api, с помощью метода filter(value -> value.getUpvotes() != null && value.getUpvotes() > 0);
 9. Выведите результат на экран;
 10. Отправьте задачу на проверку.
