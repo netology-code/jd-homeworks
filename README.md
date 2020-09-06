@@ -43,9 +43,9 @@
 
 ## Блок 1. Многопоточное программирование
 
-1.1 Многопоточное (параллельное) программирование. Создание и запуск потоков
+1.1 [Многопоточное (параллельное) программирование. Создание и запуск потоков](https://github.com/netology-code/jd-homeworks/tree/master/multithreading)
 
-1.2 Работа с синхронизацией. Synchronization, wait, notify, sleep, lock
+1.2 [Работа с синхронизацией. Synchronization, wait, notify, sleep, lock](https://github.com/netology-code/jd-homeworks/tree/master/synchronization)
 
 1.3 Volatile, threadlocal atomics
 
