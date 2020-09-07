@@ -17,7 +17,7 @@ service - слой сервисов
 
 После создаем 3 папки в директории проекта: db, api, service.
 
-В каждой из директории создаем pom.xml c содержимым:
+В каждой из директории создаем build.gradle c содержимым:
 
 ```groovy
 plugins {
@@ -77,7 +77,7 @@ public class DbSetting {
     private String name;
     private String password;
 
-    public Db(String name, String password) {
+    public DbSetting(String name, String password) {
         this.name = name;
         this.password = password;
     }
