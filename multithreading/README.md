@@ -4,9 +4,9 @@
 
 Необходимо выполнить и предоставить на проверку следующие задачи:
 
-1. [Межпоточный диалог](./1/README.md);	
-2. [Межпоточный диалог со счетчиком](./2/README.md);
-3. [Калькулятор массива](./3/README.md) (со звездочкой *).
+1. [Межпоточный диалог](https://github.com/netology-code/jd-homeworks/tree/master/multithreading/task1);	
+2. [Межпоточный диалог со счетчиком](https://github.com/netology-code/jd-homeworks/tree/master/multithreading/task2);
+3. [Калькулятор массива](https://github.com/netology-code/jd-homeworks/tree/master/multithreading/task3) (со звездочкой *).
 
 =======
 
