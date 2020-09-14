@@ -4,8 +4,8 @@
 
 Необходимо выполнить и предоставить на проверку следующие задачи:
 
-1. [Ресторан](https://github.com/netology-code/jd-homeworks/tree/master/synchronization/task1);	
-2. [Продвинутый ресторан](https://github.com/netology-code/jd-homeworks/tree/master/synchronization/task2);
+1. [Ресторан](./task1/README.md);	
+2. [Продвинутый ресторан](./task2/README.md);
 
 =======
 
