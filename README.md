@@ -47,9 +47,9 @@
 
 1.2 [Работа с синхронизацией. Synchronization, wait, notify, sleep, lock](https://github.com/netology-code/jd-homeworks/tree/master/synchronization)
 
-1.3 Volatile, threadlocal atomics
+1.3 [Volatile, threadlocal atomics](https://github.com/netology-code/jd-homeworks/tree/master/volatile)
 
-1.4 Коллекции для параллельной (конкурирующей) работы
+1.4 [Коллекции для параллельной (конкурирующей) работы](https://github.com/netology-code/jd-homeworks/tree/master/concurrent_collections)
 
 1.5 Клиент-серверное взаимодействие. Blocking и Non-Blocking IO
 
