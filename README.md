@@ -51,7 +51,9 @@
 
 1.4 [Коллекции для параллельной (конкурирующей) работы](./concurrent_collections/README.md)
 
-1.5 Клиент-серверное взаимодействие. Blocking и Non-Blocking IO
+1.5 [Клиент-серверное взаимодействие. Blocking и Non-Blocking IO](./clientserver/README.md)
+
+2.1 [Функциональное программирование](./funcprog/README.md)
 
 
 # Дипломные и курсовые проекты
