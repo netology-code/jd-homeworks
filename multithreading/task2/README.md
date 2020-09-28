@@ -17,9 +17,7 @@
 <details>
   <summary>Подсказка</summary>
   
-  Используйте `Callable` для создания задач, возвращающих результат
-  Используйте `Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors())` для создания пула потоков
-  Используйте методы `submit()` или `invokeAll` для исполнения всех задач и метод `invokeAny` для получения результата любой из них.
+  Используйте `Callable` для создания задач, возвращающих результат. Используйте `Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors())` для создания пула потоков. Используйте методы `submit()` или `invokeAll` для исполнения всех задач и метод `invokeAny` для получения результата одной из них (самой быстрой)
 </details>
 
 
