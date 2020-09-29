@@ -57,7 +57,7 @@
 
 2.1 [Функциональное программирование](./funcprog/README.md)
 
-2.2 Методология разработки. TDD, DDD
+2.2 [Методология разработки. TDD, DDD](https://github.com/netology-code/jd-homeworks/tree/master/tdd_ddd)
 
 # Дипломные и курсовые проекты
 
