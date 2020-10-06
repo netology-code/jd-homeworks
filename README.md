@@ -65,13 +65,17 @@
 ## Блок 1. Web
 
 1.1 [HTTP и современный Web]()
+
 1.2 [Формы и форматы передачи данных]()
+
 1.3 [JS, Ajax, REST, JSON, CORS]()
 
 ## Блок 2. Java EE, Java Servlets
 
 1.1 [Servlets Containers]()
+
 1.2 [Dependency Lookup, Dependency Injection, IoC, Spring, Application Context]()
+
 1.3 [Spring Web MVC]()
 
 
@@ -80,16 +84,19 @@
 ## Блок 1. Spring Boot
 
 1.1 [Spring Boot: назначение, внутреннее устройство]()
+
 1.2 [REST]()
 
 ## Блок 2. Linux
 
 1.1 [Виртуализация и основы работы]()
+
 1.2 [Разворачивание Spring Boot приложений (nginx, systemd, firewall, journalctl)]()
 
 ## Блок 3. Docker
 
 1.1 [Основы работы: Docker, Docker Compose, упаковка приложений]()
+
 1.2 [Обзорная лекция: TestContainers, Kubernetes, облака]()
 
 
@@ -98,7 +105,9 @@
 ## Блок 1. Реляционные СУБД и JDBC
 
 1.1 [Основные работы: DDL, DML]()
+
 1.2 [Вложенные подзапросы, JOIN'ы, агрегирующие запросы]()
+
 1.3 [JDBC API, JdbcTemplate, NamedParametersJdbcTemplate]()
 
 ## Блок 2. JPA
@@ -109,6 +118,7 @@
 ## Блок 3. Spring Security
 
 1.1 [Безопасность в веб-приложениях, Spring Security]()
+
 1.2 [Аутентификация и авторизация]()
 
 
