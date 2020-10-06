@@ -59,6 +59,59 @@
 
 2.2 [Методология разработки. TDD, DDD](https://github.com/netology-code/jd-homeworks/tree/master/tdd_ddd)
 
+
+# 6. Домашние задания по курсу «Web, Spring & Spring MVC»
+
+## Блок 1. Web
+
+1.1 [HTTP и современный Web]()
+1.2 [Формы и форматы передачи данных]()
+1.3 [JS, Ajax, REST, JSON, CORS]()
+
+## Блок 2. Java EE, Java Servlets
+
+1.1 [Servlets Containers]()
+1.2 [Dependency Lookup, Dependency Injection, IoC, Spring, Application Context]()
+1.3 [Spring Web MVC]()
+
+
+# 7. Домашние задания по курсу «Spring Boot, deployment и инфраструктура»
+
+## Блок 1. Spring Boot
+
+1.1 [Spring Boot: назначение, внутреннее устройство]()
+1.2 [REST]()
+
+## Блок 2. Linux
+
+1.1 [Виртуализация и основы работы]()
+1.2 [Разворачивание Spring Boot приложений (nginx, systemd, firewall, journalctl)]()
+
+## Блок 3. Docker
+
+1.1 [Основы работы: Docker, Docker Compose, упаковка приложений]()
+1.2 [Обзорная лекция: TestContainers, Kubernetes, облака]()
+
+
+# 8. Домашние задания по курсу «Хранение данных и организация безопасности»
+
+## Блок 1. Реляционные СУБД и JDBC
+
+1.1 [Основные работы: DDL, DML]()
+1.2 [Вложенные подзапросы, JOIN'ы, агрегирующие запросы]()
+1.3 [JDBC API, JdbcTemplate, NamedParametersJdbcTemplate]()
+
+## Блок 2. JPA
+
+1.1 [ORM, Hibernate, Entity Lifecycle, Embedding, Relationships]()
+1.2 [Spring JPA Repositories, JPQL]()
+
+## Блок 3. Spring Security
+
+1.1 [Безопасность в веб-приложениях, Spring Security]()
+1.2 [Аутентификация и авторизация]()
+
+
 # Дипломные и курсовые проекты
 
 [Курсовой проект 1. «Сетевой чат»](./diploma/networkchat.md)
