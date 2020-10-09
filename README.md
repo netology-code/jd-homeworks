@@ -113,6 +113,7 @@
 ## Блок 2. JPA
 
 1.1 [ORM, Hibernate, Entity Lifecycle, Embedding, Relationships]()
+
 1.2 [Spring JPA Repositories, JPQL]()
 
 ## Блок 3. Spring Security
