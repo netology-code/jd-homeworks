@@ -1,4 +1,4 @@
-# Задача 2: Анализ данных
+# Задача 2: Перепись населения
 
 ## Описание
 В данной задаче предлагается проанализировать массив данных с информаций о людях с использованием стримов из библиотеки `Stream API`. 
@@ -76,18 +76,22 @@ class Person {
 3. Получить отсортированный по фамилии список потенциально работоспособных людей с высшим образованием в выборке (т.е. людей с высшим образованием от 18 до 60 лет для женщин и до 65 лет для мужчин).
 
 ## Реализация
-В классе `Main` в функции `main()` необходимо создать коллекцию экземпляров класса `Person`:
+В классе `Main` в функции `main()` необходимо создать коллекцию экземпляров класса `Person`. Вам потребуется действительно большое количство данных. Для примера будем считать, что Вы производите перепись населения города Лондон с населением в 10 миллионов человек. Для генерации исходных данных воспользуемся следующим способом:
 ```java
-Collection<Person> persons = Arrays.asList(
-        new Person("Jack", "Evans", 16, Sex.MAN, Education.SECONDARY),
-        new Person("Connor", "Young", 23, Sex.MAN, Education.FURTHER),
-        new Person("Emily", "Harris", 42, Sex.WOMEN, Education.HIGHER),
-        new Person("Harry", "Wilson", 69, Sex.MAN, Education.HIGHER),
-        new Person("George", "Davies", 35, Sex.MAN, Education.FURTHER),
-        new Person("Samuel", "Adamson", 40, Sex.MAN, Education.HIGHER),
-        new Person("John", "Brown", 44, Sex.MAN, Education.HIGHER)
-);
+List<String> names = Arrays.asList("Jack", "Connor", "Harry", "George", "Samuel", "John");
+List<String> families = Arrays.asList("Evans", "Young", "Harris", "Wilson", "Davies", "Adamson", "Brown");
+Collection<Person> persons = new ArrayList<>();
+for (int i = 0; i < 10_000_000; i++) {
+    persons.add(new Person(
+                names.get(new Random().nextInt(names.size())),
+                families.get(new Random().nextInt(families.size())),
+                new Random().nextInt(100),
+                Sex.values()[new Random().nextInt(Sex.values().length)],
+                Education.values()[new Random().nextInt(Education.values().length)])
+    );
+}
 ```
+
 Из созданной коллекции `persons` для каждого задания создавайте новый стрим методом `stream()` и далее применяйте к нему ряд промежуточных операций и одну терминальную:
 1. Для поиска несовершеннолетних используйте промежуточный метод `filter()` и терминальный метод `count()`.
 2. Для получения списка призывников потребуется применить несколько промежуточных методов `filter()`, а также для преобразования данных из `Person` в `String` (так как нужны только фамилии) используйте метод `map()`. Так как требуется получить список `List<String>` терминальным методом будет `collect(Collectors.toList())`.
