@@ -89,9 +89,9 @@
 
 ## Блок 2. Linux
 
-1.1 [Виртуализация и основы работы]()
+2.1 [Виртуализация и основы работы]()
 
-1.2 [Разворачивание Spring Boot приложений (nginx, systemd, firewall, journalctl)]()
+2.2 [Разворачивание Spring Boot приложений (nginx, systemd, firewall, journalctl)]()
 
 ## Блок 3. Docker
 
@@ -112,15 +112,15 @@
 
 ## Блок 2. JPA
 
-1.1 [ORM, Hibernate, Entity Lifecycle, Embedding, Relationships]()
+2.1 [ORM, Hibernate, Entity Lifecycle, Embedding, Relationships]()
 
-1.2 [Spring JPA Repositories, JPQL]()
+2.2 [Spring JPA Repositories, JPQL]()
 
 ## Блок 3. Spring Security
 
-1.1 [Безопасность в веб-приложениях, Spring Security]()
+3.1 [Безопасность в веб-приложениях, Spring Security]()
 
-1.2 [Аутентификация и авторизация]()
+3.2 [Аутентификация и авторизация]()
 
 
 # Дипломные и курсовые проекты
