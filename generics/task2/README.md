@@ -57,13 +57,3 @@ public class Main {
 Box{key=имя; keyType=java.lang.String, obj=Нетология; objType=java.lang.String}
 Box{key=1; keyType=java.lang.Integer, obj=true; objType=java.lang.Boolean}
 ```
-
-Теперь создадим `ArrayList` и типизируем его для хранения объектов типа `Box<String, Integer>`:
-
-``
-ArrayList<Box<String, Integer>> list1 = new ArrayList<>();
-``
-
-Попробуйте добавить в него объекты `sample1` и `sample2`. Однако Вы столкнетесь с ошибкой. С помощью комментария в коде объясните, в чем заключается ошибка и по какой причине она возникла.
-
-Исправьте ошибку, создав дополнительный типизированный `ArrayList` и добавив в него оставшийся объект `sample`.
