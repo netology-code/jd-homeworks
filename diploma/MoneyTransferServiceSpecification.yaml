@@ -1,0 +1,213 @@
+openapi: 3.0.0
+info:
+  title: Transfer Money API
+  description: Transfer Money API
+  version: 1.0.0
+servers:
+  - url: 'http://localhost:8080/transfer'
+    description: local server
+paths:
+  /cards:
+    get:
+      summary: Operations with cards
+      parameters:
+        - in: header
+          name: X-Token
+          schema:
+            type: string
+          required: true
+      responses:
+        '200':
+          description: Cards list
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    number:
+                      type: string
+                      required: true
+                    amount:
+                      type: integer
+                      required: true
+        '400':
+          description: Error input data
+        '500':
+          description: Error getting cards list
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    description: Error customer message
+                  id:
+                    type: integer
+  /transfer:
+    post:
+      summary: Transfer money card to card
+      description: Call to send money between cards
+      requestBody:
+        description: Card from and card to
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                cardFromNumber:
+                  type: string
+                cardFromValidTill:
+                  type: string
+                cardFromCVV:
+                  type: string
+                cardToNumber:
+                  type: string
+      responses:
+        '200':
+          description: Success transfer
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  ref:
+                    type: string
+                    description: Operation reference
+        '400':
+          description: Error input data
+        '500':
+          description: Error transfer
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    description: Error customer message
+                  id:
+                    type: integer
+  /confirmOperation:
+    get:
+      summary: Get operation code confirmation
+      description: Return code
+      parameters:
+        - in: path
+          name: operationId
+          schema:
+            type: string
+          required: true
+          description: Operation id
+      responses:
+        '200':
+          description: Code
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: string
+                    description: Confirmation code
+                  operationId:
+                    type: string
+                    description: Operation id
+        '400':
+          description: Error input data
+        '500':
+          description: Error confirmation
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    description: Error customer message
+                  id:
+                    type: integer
+    post:
+      summary: Confirm operations
+      description: Confirming operataion with code
+      requestBody:
+        description: Confirm operation
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                operationId:
+                  type: string
+                code:
+                  type: string
+      responses:
+        '200':
+          description: Success confirmation
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  ref:
+                    type: string
+                    description: Operation id
+        '400':
+          description: Error input data
+        '500':
+          description: Error confirmation
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    description: Error customer message
+                  id:
+                    type: integer
+  /login:
+    post:
+      summary: Login
+      description: Getting authorization token
+      requestBody:
+        description: Login with username and password
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                login:
+                  type: string
+                password:
+                  type: string
+      responses:
+        '200':
+          description: Success login
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  token:
+                    type: string
+                    description: Auth token
+        '400':
+          description: Error input data
+        '500':
+          description: Error authorization
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    description: Error customer message
+                  id:
+                    type: integer
