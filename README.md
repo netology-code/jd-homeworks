@@ -72,11 +72,11 @@
 
 ## Блок 2. Java EE, Java Servlets
 
-1.1 [Servlets Containers](https://github.com/netology-code/jspr-homeworks/tree/master/04_servlets)
+2.1 [Servlets Containers](https://github.com/netology-code/jspr-homeworks/tree/master/04_servlets)
 
-1.2 [Dependency Lookup, Dependency Injection, IoC, Spring, Application Context](https://github.com/netology-code/jspr-homeworks/tree/master/05_di)
+2.2 [Dependency Lookup, Dependency Injection, IoC, Spring, Application Context](https://github.com/netology-code/jspr-homeworks/tree/master/05_di)
 
-1.3 [Spring Web MVC](https://github.com/netology-code/jspr-homeworks/tree/master/06_mvc)
+2.3 [Spring Web MVC](https://github.com/netology-code/jspr-homeworks/tree/master/06_mvc)
 
 
 # 7. Домашние задания по курсу «Spring Boot, deployment и инфраструктура»
@@ -95,9 +95,9 @@
 
 ## Блок 3. Docker
 
-1.1 [Основы работы: Docker, Docker Compose, упаковка приложений]()
+3.1 [Основы работы: Docker, Docker Compose, упаковка приложений]()
 
-1.2 [Обзорная лекция: TestContainers, Kubernetes, облака]()
+3.2 [Обзорная лекция: TestContainers, Kubernetes, облака]()
 
 
 # 8. Домашние задания по курсу «Хранение данных и организация безопасности»
