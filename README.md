@@ -64,19 +64,19 @@
 
 ## Блок 1. Web
 
-1.1 [HTTP и современный Web]()
+1.1 [HTTP и современный Web](https://github.com/netology-code/jspr-homeworks/tree/master/01_web)
 
-1.2 [Формы и форматы передачи данных]()
+1.2 [Формы и форматы передачи данных](https://github.com/netology-code/jspr-homeworks/tree/master/02_forms)
 
-1.3 [JS, Ajax, REST, JSON, CORS]()
+1.3 JS, Ajax, REST, JSON, CORS (домашнее задание не предусмотрено)
 
 ## Блок 2. Java EE, Java Servlets
 
-1.1 [Servlets Containers]()
+1.1 [Servlets Containers](https://github.com/netology-code/jspr-homeworks/tree/master/04_servlets)
 
-1.2 [Dependency Lookup, Dependency Injection, IoC, Spring, Application Context]()
+1.2 [Dependency Lookup, Dependency Injection, IoC, Spring, Application Context](https://github.com/netology-code/jspr-homeworks/tree/master/05_di)
 
-1.3 [Spring Web MVC]()
+1.3 [Spring Web MVC](https://github.com/netology-code/jspr-homeworks/tree/master/06_mvc)
 
 
 # 7. Домашние задания по курсу «Spring Boot, deployment и инфраструктура»
@@ -130,3 +130,14 @@
 [Курсовой проект 2. «Сервис перевода денег»](./diploma/moneytransferservice.md)
 
 [Дипломная работа «Облачное хранилище»](./diploma/cloud.md)
+
+
+---
+
+# FAQ
+
+Важно: [Правила оформления вопросов, сообщений о ошибках и проблемах](https://github.com/netology-code/jspr-homeworks/blob/master/report-requirements.md)
+
+Важно: [Примеры кода из лекций Модуля 6 «Web, Spring & Spring MVC»](https://github.com/netology-code/jspr-code)
+
+Важно: [Как установить Intellij IDEA Ultimate](https://github.com/netology-code/jspr-homeworks/blob/master/idea-installation.md)
