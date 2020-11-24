@@ -38,7 +38,7 @@ public class ProductionProfile implements SystemProfile {
 }
 ``` 
 
-### 2. Вам необходимо написать JavaConfig, в котором вы объявите бины классов `DevProfile` и `ProductionProfile` примерно так:
+2. Вам необходимо написать JavaConfig, в котором вы объявите бины классов `DevProfile` и `ProductionProfile` примерно так:
 ```$java
     @Bean
     public SystemProfile devProfile() {
