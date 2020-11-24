@@ -83,7 +83,7 @@
 
 ## Блок 1. Spring Boot
 
-1.1 [Spring Boot: назначение, внутреннее устройство]()
+1.1 [Spring Boot: назначение, внутреннее устройство](https://github.com/netology-code/jd-homeworks/tree/master/spring_boot)
 
 1.2 [REST]()
 
