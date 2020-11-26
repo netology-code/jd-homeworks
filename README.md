@@ -85,7 +85,7 @@
 
 1.1 [Spring Boot: назначение, внутреннее устройство](https://github.com/netology-code/jd-homeworks/tree/master/spring_boot)
 
-1.2 [REST]()
+1.2 [REST](https://github.com/netology-code/jd-homeworks/tree/master/spring_boot_rest)
 
 ## Блок 2. Linux
 
