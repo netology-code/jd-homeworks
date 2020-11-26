@@ -26,11 +26,14 @@ paths:
                 cardFromCVV:
                   type: string
                 cardToNumber:
-                  type: string
+                  type: string  
                 amount:
-                  type: integer
-                currency:
-                  type: string
+                  type: object
+                  properties:  
+                    value:
+                      type: integer
+                    currency:
+                      type: string
       responses:
         '200':
           description: Success transfer
