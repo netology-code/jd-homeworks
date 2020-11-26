@@ -27,6 +27,10 @@ paths:
                   type: string
                 cardToNumber:
                   type: string
+                amount:
+                  type: integer
+                currency:
+                  type: string
       responses:
         '200':
           description: Success transfer
