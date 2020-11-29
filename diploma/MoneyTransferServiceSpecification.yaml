@@ -47,6 +47,16 @@ paths:
                     description: Operation id
         '400':
           description: Error input data
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    description: Error customer message
+                  id:
+                    type: integer          
         '500':
           description: Error transfer
           content:
@@ -90,6 +100,16 @@ paths:
                     description: Operation id
         '400':
           description: Error input data
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    description: Error customer message
+                  id:
+                    type: integer          
         '500':
           description: Error confirmation
           content:
