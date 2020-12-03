@@ -47,6 +47,16 @@ paths:
                     description: Operation id
         '400':
           description: Error input data
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    description: Error customer message
+                  id:
+                    type: integer          
         '500':
           description: Error transfer
           content:
@@ -60,44 +70,6 @@ paths:
                   id:
                     type: integer
   /confirmOperation:
-    get:
-      summary: Get operation code confirmation
-      description: Return code
-      parameters:
-        - in: path
-          name: operationId
-          schema:
-            type: string
-          required: true
-          description: Operation id
-      responses:
-        '200':
-          description: Code
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  code:
-                    type: string
-                    description: Verification code
-                  operationId:
-                    type: string
-                    description: Operation id
-        '400':
-          description: Error input data
-        '500':
-          description: Error confirmation
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  message:
-                    type: string
-                    description: Error customer message
-                  id:
-                    type: integer
     post:
       summary: Confirm operation
       description: Confirming operataion with code
@@ -128,6 +100,16 @@ paths:
                     description: Operation id
         '400':
           description: Error input data
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    description: Error customer message
+                  id:
+                    type: integer          
         '500':
           description: Error confirmation
           content:
