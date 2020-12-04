@@ -91,7 +91,7 @@
 
 2.1 Виртуализация и основы работы (домашнее задание не предусмотрено)
 
-2.2 [Разворачивание Spring Boot приложений (nginx, systemd, firewall, journalctl)]()
+2.2 [Разворачивание Spring Boot приложений (nginx, systemd, firewall, journalctl)](https://github.com/netology-code/jd-homeworks/tree/master/linux)
 
 ## Блок 3. Docker
 
