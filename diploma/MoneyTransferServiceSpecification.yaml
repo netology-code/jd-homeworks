@@ -42,7 +42,7 @@ paths:
               schema:
                 type: object
                 properties:
-                  ref:
+                  operationId:
                     type: string
                     description: Operation id
         '400':
