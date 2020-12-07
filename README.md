@@ -95,7 +95,7 @@
 
 ## Блок 3. Docker
 
-3.1 [Основы работы: Docker, Docker Compose, упаковка приложений]()
+3.1 [Основы работы: Docker, Docker Compose, упаковка приложений](https://github.com/netology-code/jd-homeworks/tree/master/docker)
 
 3.2 [Обзорная лекция: TestContainers, Kubernetes, облака]()
 
