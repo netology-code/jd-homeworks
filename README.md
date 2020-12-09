@@ -97,7 +97,7 @@
 
 3.1 [Основы работы: Docker, Docker Compose, упаковка приложений](https://github.com/netology-code/jd-homeworks/tree/master/docker)
 
-3.2 [Обзорная лекция: TestContainers, Kubernetes, облака]()
+3.2 [Обзорная лекция: TestContainers, Kubernetes, облака](https://github.com/netology-code/jd-homeworks/tree/master/containers)
 
 
 # 8. Домашние задания по курсу «Хранение данных и организация безопасности»
