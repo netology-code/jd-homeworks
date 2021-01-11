@@ -104,7 +104,7 @@
 
 ## Блок 1. Реляционные СУБД и JDBC
 
-1.1 [Основные работы: DDL, DML]()
+1.1 [Основные работы: DDL, DML](https://github.com/netology-code/jd-homeworks/tree/master/sql-basic)
 
 1.2 [Вложенные подзапросы, JOIN'ы, агрегирующие запросы]()
 
