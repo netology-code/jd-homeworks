@@ -106,7 +106,7 @@
 
 1.1 [Основные работы: DDL, DML](https://github.com/netology-code/jd-homeworks/tree/master/sql-basic)
 
-1.2 [Вложенные подзапросы, JOIN'ы, агрегирующие запросы]()
+1.2 [Вложенные подзапросы, JOIN'ы, агрегирующие запросы](https://github.com/netology-code/jd-homeworks/tree/master/sql-agg)
 
 1.3 [JDBC API, JdbcTemplate, NamedParametersJdbcTemplate]()
 
