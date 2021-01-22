@@ -112,7 +112,7 @@
 
 ## Блок 2. JPA
 
-2.1 [ORM, Hibernate, Entity Lifecycle, Embedding, Relationships]()
+2.1 [ORM, Hibernate](https://github.com/netology-code/jd-homeworks/tree/master/hibernate)
 
 2.2 [Spring JPA Repositories, JPQL]()
 
