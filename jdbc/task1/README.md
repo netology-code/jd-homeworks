@@ -13,6 +13,15 @@
  - создайте класс и пометьте его аннотацией Repository, либо создайте бин репозитория в Java config классе
  - добавьте в поле класса String, которое содержит ваше содержание вашего скрипта. Само содержание вы можете считать с помощью кода ниже. Вам надо будет передать в метод `read` название вашего скрипта, который лежит в папке `resources`. Например так: `read(myScript.sql)`.
  - создайте метод `getProductName(String name)`, который будет принимать имя и возвращать название продукта из базы данных.
+```java
+public static String read(String scriptName) {
+    try (InputStream is = new ClassPathResource(scriptName).getInputStream()) {
+        return String.join("\n", readLines(is));
+    } catch (IOException e) {
+        throw new RuntimeException(e);
+    }
+}
+``` 
 
 4. Напишите контроллер, с методом-обработчиком GET-метода запроса с маппингом на endpoint `/products/fetch-product`. В query params запроса будет приходить строковый параметр `name`, который вам надо будет передавать дальше в репозиторий. То есть, ваш метод должен уметь обрабатывать запрос вида `localhost:8080/products/fetch-product?name=Ivan`.
 Контроллер должен будет возвращать название продукта, который он получит от репозитория.
