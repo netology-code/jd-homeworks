@@ -120,7 +120,7 @@
 
 3.1 [Безопасность в веб-приложениях, Spring Security](https://github.com/netology-code/jd-homeworks/tree/master/spring_security)
 
-3.2 [Аутентификация и авторизация]()
+3.2 [Аутентификация и авторизация](https://github.com/netology-code/jd-homeworks/tree/master/spring_method_security)
 
 
 # Дипломные и курсовые проекты
