@@ -129,7 +129,7 @@
 
 [Курсовой проект 2. «Сервис перевода денег»](./diploma/moneytransferservice.md)
 
-[Дипломная работа «Облачное хранилище»](./diploma/cloud.md)
+[Дипломная работа «Облачное хранилище»](diploma/cloudservice.md)
 
 
 ---

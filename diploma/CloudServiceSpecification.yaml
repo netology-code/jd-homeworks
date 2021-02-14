@@ -1,0 +1,196 @@
+openapi: 3.0.0
+info:
+  title: Cloud API
+  description: Cloud API
+  version: 1.0.0
+servers:
+  - url: 'http://localhost:8080/cloud'
+    description: local server
+paths:
+  /login:
+    post:
+      description: Authorization method
+      requestBody:
+        description: Login and password hash
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                login:
+                  type: string
+                  required: true
+                password:
+                  type: string
+                  required: true
+      responses:
+        '200':
+          description: Success authorization
+          headers:
+            Set-Cookie:
+              description: Set authorization cookie/token
+              schema:
+                type: string
+        '400':
+          description: Error input data
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+  /logout:
+    post:
+      description: Logout
+      security:
+        - cookieAuth: [ ]
+      responses:
+        '200':
+          description: Success logout
+  /file:
+    post:
+      description: Upload file to server
+      security:
+        - cookieAuth: [ ]
+      parameters:
+        - name: filename
+          in: query
+          schema:
+            type: string
+          description: File name to upload
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/File'
+      responses:
+        '200':
+          description: Success upload
+        '400':
+          description: Error input data
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Error upload file
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    delete:
+      description: Delete file
+      security:
+        - cookieAuth: [ ]
+      parameters:
+        - name: filename
+          in: query
+          schema:
+            type: string
+          description: File name to delete
+          required: true
+      responses:
+        '200':
+          description: Success deleted
+        '400':
+          description: Error input data
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Error delet file
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    get:
+      description: Dowload file from cloud
+      security:
+        - cookieAuth: [ ]
+      parameters:
+        - name: filename
+          in: query
+          schema:
+            type: string
+          description: File name to download
+      responses:
+        '200':
+          description: Success deleted
+          content:
+            multipart/form-data:
+              schema:
+                $ref: '#/components/schemas/File'
+        '400':
+          description: Error input data
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Error upload file
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+  /list:
+    get:
+      description: Get all files
+      security:
+        - cookieAuth: [ ]
+      parameters:
+        - name: limit
+          in: query
+          schema:
+            type: integer
+          description: Number requested items
+      responses:
+        '200':
+          description: Success get list
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  filename:
+                    type: string
+                    description: File name
+                    required: true
+                  size:
+                    type: integer
+                    description: File size in bytes
+                    required: true
+        '400':
+          description: Error input data
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Error getting file list
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+components:
+  securitySchemes:
+    cookieAuth:
+      type: token
+      in: cookie
+      name: SESSION_ID  # cookie name
+  schemas:
+    Error:
+      type: object
+      properties:
+        message:
+          type: string
+          description: Error message
+        id:
+          type: integer
+    File:
+      type: object
+      properties:
+        hash:
+          type: string
+        file:
+          type: string
+          format: binary
