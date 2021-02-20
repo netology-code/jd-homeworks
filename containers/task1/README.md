@@ -26,22 +26,23 @@ ADD build/libs/<название вашего архива>.jar myapp.jar
 ENTRYPOINT ["java","-jar","/myapp.jar"]
 ```
 Если вы собирали с помощью maven, тогда jar будет лежать в папке `target`, а если gradle - в `build/libs`, и, соответственно, в `ADD` надо прописывать путь изходя из того, какой сборщик вы использовали.
- - теперь соберите образ выполнив в корне проекта в терминале команду `docker build -t devApp .`. Так мы соберем наше приложение в образ с названием `devApp`.
+ - теперь соберите образ выполнив в корне проекта в терминале команду `docker build -t devapp .`. Так мы соберем наше приложение в образ с названием `devapp`.
  
 3. И теперь нам надо собрать второй образ из этого же приложения, но с другими параметрами.
  - установите порт `server.port=8081` и профиль в prod с помощью параметра `netology.profile.dev=false` в application.properties и соберите приложение как в предыдущем пунтке. 
  - измените в Dockerfile параметр `EXPOSE` с 8080 на 8081.
- - соберите образ выполнив в корне проекта в терминале команду `docker build -t prodApp .`. Так мы соберем наше приложение в образ с названием `prodApp`.
+ - соберите образ выполнив в корне проекта в терминале команду `docker build -t prodapp .`. Так мы соберем наше приложение в образ с названием `prodapp`.
  
 4. Напишем наш интеграционный тест:
  - добавьте в зависимость проекта 
    - для gradle - 
-```testImplementation 'org.testcontainers:junit-jupiter```
+```testImplementation 'org.testcontainers:junit-jupiter:1.15.1'```
    - для maven - 
 ```
 <dependency>
     <groupId>org.testcontainers</groupId>
     <artifactId>junit-jupiter</artifactId>
+    <version>1.15.1</version>
     <scope>test</scope>
 </dependency>
 ```
