@@ -38,9 +38,13 @@
 
 ## Описание и запуск FRONT
 
-1. Установить nodejs на компьютер следуя инструкции: https://nodejs.org/ru/download/
+1. Установить nodejs (версия не ниже 14.15.0) на компьютер следуя инструкции: https://nodejs.org/ru/download/
 2. Скачать [FRONT](./netology-diplom-frontend) (JavaScript)
 3. Следуя описанию README.md FRONT проекта запустить nodejs приложение (npm install...)
+4. Можно задать url для вызова своего backend сервиса:
+  1. В файле `.env` FRONT прижложения нужно указать полный url до backend, например: `VUE_APP_BASE_URL=http://localhost:8080`
+  2. Пересобрать и запусить FRONT снова: `npm run build`
+  3. Измененный `url` сохранится для следующих запусков
 
 ____________
 
