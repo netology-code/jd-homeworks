@@ -132,6 +132,41 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error'
+    put:
+      description: Edit file name
+      security:
+        - cookieAuth: [ ]
+      parameters:
+        - name: filename
+          in: query
+          schema:
+            type: string
+          description: File name to upload
+      requestBody:
+        description: Login and password hash
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+      responses:
+        '200':
+          description: Success upload
+        '400':
+          description: Error input data
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Error upload file
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'                
   /list:
     get:
       description: Get all files
