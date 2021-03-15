@@ -42,9 +42,9 @@
 2. Скачать [FRONT](./netology-diplom-frontend) (JavaScript)
 3. Следуя описанию README.md FRONT проекта запустить nodejs приложение (npm install...)
 4. Можно задать url для вызова своего backend сервиса:
-  1. В файле `.env` FRONT прижложения нужно указать полный url до backend, например: `VUE_APP_BASE_URL=http://localhost:8080`
-  2. Пересобрать и запусить FRONT снова: `npm run build`
-  3. Измененный `url` сохранится для следующих запусков
+    1. В файле `.env` FRONT (находится в корне проекта) приложения нужно изменить url до backend, например: `VUE_APP_BASE_URL=http://localhost:8080`
+    2. Пересобрать и запустить FRONT снова: `npm run build`
+    3. Измененный `url` сохранится для следующих запусков.
 
 ____________
 
