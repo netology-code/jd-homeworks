@@ -39,7 +39,7 @@ export default createStore({
         login({dispatch}: any, {email, password}) {
             return login(email, password)
                 .then(res => {
-                    dispatch('setAuthToken', res.data);
+                    dispatch('setAuthToken', res.data['auth-token']);
                     return res;
                 })
                 .catch(err => {
@@ -51,7 +51,7 @@ export default createStore({
                 })
         },
         logout({dispatch}: any) {
-            return new Promise((res, rej) => {
+            return new Promise((res) => {
                 logout()
                     .then(() => {
                         dispatch('setAuthToken', '');
@@ -59,7 +59,9 @@ export default createStore({
                         res();
                     })
                     .catch(() => {
-                        rej()
+                        dispatch('setAuthToken', '');
+                        cookies.erase(AUTH_TOKEN_KEY);
+                        res();
                     })
             })
         },
