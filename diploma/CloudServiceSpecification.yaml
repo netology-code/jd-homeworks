@@ -27,31 +27,37 @@ paths:
       responses:
         '200':
           description: Success authorization
-          headers:
-            Set-Cookie:
-              description: Set authorization cookie/token
+          content:
+            application/json:
               schema:
-                type: string
+                $ref: '#/components/schemas/Login'
         '400':
-          description: Error input data
+          description: Bad credentials
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error'
   /logout:
     post:
+      parameters:
+        - in: header
+          name: auth-token
+          schema:
+            type: string
+          required: true
       description: Logout
-      security:
-        - cookieAuth: [ ]
       responses:
         '200':
           description: Success logout
   /file:
     post:
       description: Upload file to server
-      security:
-        - cookieAuth: [ ]
       parameters:
+        - in: header
+          name: auth-token
+          schema:
+            type: string
+          required: true
         - name: filename
           in: query
           schema:
@@ -71,17 +77,20 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error'
-        '500':
-          description: Error upload file
+        '401':
+          description: Unauthorized error
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error'
     delete:
       description: Delete file
-      security:
-        - cookieAuth: [ ]
       parameters:
+        - in: header
+          name: auth-token
+          schema:
+            type: string
+          required: true
         - name: filename
           in: query
           schema:
@@ -97,6 +106,12 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error'
+        '401':
+          description: Unauthorized error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
         '500':
           description: Error delet file
           content:
@@ -105,9 +120,12 @@ paths:
                 $ref: '#/components/schemas/Error'
     get:
       description: Dowload file from cloud
-      security:
-        - cookieAuth: [ ]
       parameters:
+        - in: header
+          name: auth-token
+          schema:
+            type: string
+          required: true
         - name: filename
           in: query
           schema:
@@ -126,6 +144,12 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error'
+        '401':
+          description: Unauthorized error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
         '500':
           description: Error upload file
           content:
@@ -134,9 +158,12 @@ paths:
                 $ref: '#/components/schemas/Error'
     put:
       description: Edit file name
-      security:
-        - cookieAuth: [ ]
       parameters:
+        - in: header
+          name: auth-token
+          schema:
+            type: string
+          required: true
         - name: filename
           in: query
           schema:
@@ -161,6 +188,12 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error'
+        '401':
+          description: Unauthorized error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
         '500':
           description: Error upload file
           content:
@@ -170,9 +203,12 @@ paths:
   /list:
     get:
       description: Get all files
-      security:
-        - cookieAuth: [ ]
       parameters:
+        - in: header
+          name: auth-token
+          schema:
+            type: string
+          required: true
         - name: limit
           in: query
           schema:
@@ -200,6 +236,12 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error'
+        '401':
+          description: Unauthorized error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
         '500':
           description: Error getting file list
           content:
@@ -207,11 +249,6 @@ paths:
               schema:
                 $ref: '#/components/schemas/Error'
 components:
-  securitySchemes:
-    cookieAuth:
-      type: token
-      in: cookie
-      name: SESSION_ID  # cookie name
   schemas:
     Error:
       type: object
@@ -229,3 +266,8 @@ components:
         file:
           type: string
           format: binary
+    Login:
+      type: object
+      properties:
+        auth-token:
+          type: string
