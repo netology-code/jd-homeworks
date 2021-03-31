@@ -26,10 +26,11 @@ const logout = () => {
 
 /**
  * Получаем список файлов
+ * @param limit
  */
-const getFiles = () => {
+const getFiles = (limit: number) => {
     return httpClient.get(
-        '/list',
+        `/list?limit=${limit}`,
     );
 }
 

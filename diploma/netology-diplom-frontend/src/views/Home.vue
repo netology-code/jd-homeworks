@@ -20,11 +20,11 @@
                                         @change="selectAllFiles" />
                         </th>
                         <th class="files__header"
-                            @click="changeSort('name')">
+                            @click="changeSort('filename')">
                             Название
 
-                            <img v-if="sortColumn === 'name' && sortColumnReverse" src="@/assets/icons/down-arrow.svg">
-                            <img v-if="sortColumn === 'name' && !sortColumnReverse" src="@/assets/icons/up-arrow.svg">
+                            <img v-if="sortColumn === 'filename' && sortColumnReverse" src="@/assets/icons/down-arrow.svg">
+                            <img v-if="sortColumn === 'filename' && !sortColumnReverse" src="@/assets/icons/up-arrow.svg">
                         </th>
                         <th class="files__header"
                             @click="changeSort('editedAt')">
@@ -73,7 +73,7 @@
                         <td class="files__cell files__cell--select">
                             <e-checkbox v-model="file.selected" @change="onFileSelect" />
                         </td>
-                        <td :title="file.name" class="files__cell"
+                        <td :title="file.filename" class="files__cell"
                             @click="file.selected = !file.selected">
                             <div :class="[
                                      `files__extension-icon--length-${file.ext.length}`
@@ -144,7 +144,7 @@
         },
         setup() {
             const store = useStore();
-            const sortColumn = ref('name');
+            const sortColumn = ref('filename');
             const sortColumnReverse = ref(false);
             const files = reactive([] as any);
             const allFilesSelection = ref(false);
@@ -162,7 +162,7 @@
                         for (const file of res.data) {
                             file.error = false;
                             file.selected = false;
-                            file.ext = file.name.match(/\.\w+$/g)[0].slice(1);
+                            file.ext = file.filename.match(/\.\w+$/g)[0].slice(1);
                             files.push(file);
                         }
 
@@ -231,7 +231,7 @@
             };
 
             const getFileNameWithoutExt = (file: any) => {
-                return file.name.replace(new RegExp(`.${file.ext}$`), '');
+                return file.filename.replace(new RegExp(`.${file.ext}$`), '');
             };
 
             const isSeveralFilesSelected = computed(() => {
@@ -257,25 +257,25 @@
 
             const fileChangeName = (file: any) => {
                 store.dispatch('addNotification', {
-                    text: `Переименование файла "${file.name}"`,
+                    text: `Переименование файла "${file.filename}"`,
                     status: 'loading'
                 }).then(notification => {
                     const filename = `${Math.floor(Math.random() * 1000)}.${file.ext}`;
 
-                    updateFile(file.name, {name: filename})
+                    updateFile(file.filename, {filename})
                         .then(res => {
                             setTimeout(() => {
-                                file.name = filename;
+                                file.filename = filename;
 
                                 notification.status = 'success';
-                                notification.text = `Файл "${file.name}" успешно переименован`;
+                                notification.text = `Файл "${file.filename}" успешно переименован`;
                             }, 2000);
                         })
                         .catch(res => {
                             setTimeout(() => {
                                 file.error = true;
                                 notification.status = 'error';
-                                notification.text = `Не удалось переименовать файл "${file.name}"`;
+                                notification.text = `Не удалось переименовать файл "${file.filename}"`;
                             }, 2000);
                         })
                         .then(() => {
@@ -289,28 +289,28 @@
 
             const fileDownload = (file: any) => {
                 store.dispatch('addNotification', {
-                    text: `Скачивание файла "${file.name}"`,
+                    text: `Скачивание файла "${file.filename}"`,
                     status: 'loading'
                 }).then(notification => {
-                    downloadFile(file.name)
+                    downloadFile(file.filename)
                         .then((res: any) => {
                             const url = window.URL.createObjectURL(new Blob([res.data]));
                             const link = document.createElement('a');
                             link.href = url;
-                            link.setAttribute('download', file.name);
+                            link.setAttribute('download', file.filename);
                             document.body.appendChild(link);
                             link.click();
 
                             setTimeout(() => {
                                 notification.status = 'success';
-                                notification.text = `Файл "${file.name}" успешно скачан`;
+                                notification.text = `Файл "${file.filename}" успешно скачан`;
                             }, 2000);
                         })
                         .catch(res => {
                             setTimeout(() => {
                                 file.error = true;
                                 notification.status = 'error';
-                                notification.text = `Не удалось скачать файл "${file.name}"`;
+                                notification.text = `Не удалось скачать файл "${file.filename}"`;
                             }, 2000);
                         })
                         .then(() => {
@@ -324,23 +324,23 @@
 
             const fileDelete = (file: any) => {
                 store.dispatch('addNotification', {
-                    text: `Удаление файла "${file.name}"`,
+                    text: `Удаление файла "${file.filename}"`,
                     status: 'loading'
                 }).then(notification => {
-                    deleteFile(file.name)
+                    deleteFile(file.filename)
                         .then(res => {
                             setTimeout(() => {
                                 getFiles();
 
                                 notification.status = 'success';
-                                notification.text = `Файл "${file.name}" успешно удалён`;
+                                notification.text = `Файл "${file.filename}" успешно удалён`;
                             }, 2000);
                         })
                         .catch(res => {
                             setTimeout(() => {
                                 file.error = true;
                                 notification.status = 'error';
-                                notification.text = `Не удалось удалить файл "${file.name}"`;
+                                notification.text = `Не удалось удалить файл "${file.filename}"`;
                             }, 2000);
                         })
                         .then(() => {

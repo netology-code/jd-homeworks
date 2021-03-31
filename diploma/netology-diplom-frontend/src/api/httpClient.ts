@@ -15,7 +15,11 @@ const getAuthToken = () => cookies.get(AUTH_TOKEN_KEY);
 
 const authInterceptor = (config: any) => {
     config.mode =  'no-cors';
-    config.headers[AUTH_TOKEN_KEY] = `Bearer ${getAuthToken()}`;
+
+    if (getAuthToken() !== null) {
+        config.headers[AUTH_TOKEN_KEY] = `Bearer ${getAuthToken()}`;
+    }
+
     return config;
 }
 

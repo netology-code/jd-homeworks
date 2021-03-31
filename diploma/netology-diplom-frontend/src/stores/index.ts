@@ -66,7 +66,7 @@ export default createStore({
             })
         },
         getFiles() {
-            return getFiles()
+            return getFiles(3)
                 .then(res => {
                     return res;
                 })
