@@ -8,7 +8,7 @@
 ```java
 public enum Sex {
     MAN,
-    WOMEN
+    WOMAN
 }
 ```
 2. `Education`, содержащий типы образования:
