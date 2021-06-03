@@ -1,38 +1,30 @@
 # Запрос на получение списка фактов о кошках
 
 ## Описание
-По адресу https://cat-fact.herokuapp.com/facts находится список фактов о кошках (англ.). Наша задача - сделать запрос к этому ресурсу и отфильтровать факты, за которые никто не проголосовал (поле upvotes).
+По адресу https://raw.githubusercontent.com/netology-code/jd-homeworks/master/http/task1/cats находится список фактов о кошках (англ.). Наша задача - сделать запрос к этому ресурсу и отфильтровать факты, за которые никто не проголосовал (поле upvotes).
 Формат каждой записи следующий:
 ```json
 {
-  "_id": "5b4910ae0508220014ccfe90",
-  "text": "Cats can hear the ultrasonic noises that rodents and dolphins make to communicate.",
+  "_id": "5b4910ae0508220014ccfe91",
+  "text": "Кошки могуть создавать более 100 разных звуков, тогда как собаки только около 10.",
   "type": "cat",
-  "user": {
-    "_id": "5a9ac18c7478810ea6c06381",
-    "name": {
-      "first": "Alex",
-      "last": "Wohlbruck"
-    }
-  },
-  "upvotes": 11,
-  "userUpvoted": null
-}
+  "user": "Alex Petrov",
+  "upvotes": null
+},
 ```
 ```text
 _id - уникальный идентификатор записи
 text - сообщение
-type - тип
-user - описание пользователя
+type - тип животного
+user - имя пользователя
 upvotes - голоса
-userUpvotes - пользователей проголосовало
 ```
 
 ## Что нужно сделать
-- Обработать и вернуть список фактов о кошках у которых поле upvotes не равно `null`
+- Прочитать весь список и вернуть только те факты, у которых поле upvotes не равно `null`.
 
 ## Реализация
-1. Перед тем как начать откройте url https://cat-fact.herokuapp.com/facts в браузере и посмотрите на данные;
+1. Перед тем как начать откройте url https://raw.githubusercontent.com/netology-code/jd-homeworks/master/http/task1/cats в браузере и посмотрите на данные;
 2. Создайте проект `maven` или `gradle` и добавьте в pom.xml или gradle.build библиотеку apache httpclient
 Пример:
 ```text
@@ -52,7 +44,7 @@ CloseableHttpClient httpClient = HttpClientBuilder.create()
         .build())
     .build();
 ```
-4. Добавьте объект запроса HttpGet request = new HttpGet("https://cat-fact.herokuapp.com/facts") и
+4. Добавьте объект запроса HttpGet request = new HttpGet("https://raw.githubusercontent.com/netology-code/jd-homeworks/master/http/task1/cats") и
 вызовите удаленный сервис `CloseableHttpResponse response = httpClient.execute(request)`;
 5. Добавьте в pom.xml или gradle.build библиотеку для работы с json
 Пример:
