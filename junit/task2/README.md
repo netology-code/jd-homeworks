@@ -19,7 +19,7 @@ Maven:
 ```
 Или Gradle:
 ```gradle
-  testCompile("org.hamcrest:hamcrest-all:1.3")
+      testImplementation 'org.hamcrest:hamcrest-all:1.3'
 ```
 
 *Пример теста из презентации:*
