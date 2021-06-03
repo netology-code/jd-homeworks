@@ -1,0 +1,14 @@
+[{
+  "_id": "5b4910ae0508220014ccfe90",
+  "text": "Cats can hear the ultrasonic noises that rodents and dolphins make to communicate.",
+  "type": "cat",
+  "user": {
+    "_id": "5a9ac18c7478810ea6c06381",
+    "name": {
+      "first": "Alex",
+      "last": "Wohlbruck"
+    }
+  },
+  "upvotes": 11,
+  "userUpvoted": null
+}]
