@@ -36,7 +36,7 @@ public class Frog {
 2. Создайте интерфейс `FrogCommand`, в котором будут храниться команды лягушке:
 ```java
 public interface FrogCommand {
-  boolean do();
+  boolean doit();
   boolean undo();
 }
 ```
@@ -46,7 +46,7 @@ public interface FrogCommand {
 public class FrogCommands {
   public static FrogCommand jumpRightCommand(Frog frog, int steps) {
     // возвращаете объект команды, у которого
-    // если вызвать .do(), то лягушка её выполнит,
+    // если вызвать .doit(), то лягушка её выполнит,
     // если вызвать .undo(), то лягушка её отменит
   }
 }
@@ -56,7 +56,7 @@ public class FrogCommands {
 ```java
 public static void main(String[] args) {
   //...
-  List<FrogCommands> commands = new ArrayList<>();
+  List<FrogCommand> commands = new ArrayList<>();
   int curCommand = -1;
   while (true) {
     //считываем ввод и конструируем комманду, если
@@ -74,7 +74,7 @@ public static void main(String[] args) {
         System.out.println("Нечего отменять!");
       } else {
         curCommand++;
-        commands.get(curCommand).do();
+        commands.get(curCommand).doit();
       }
     } else { //пользователь ввёл новое движение для лягушки
       if (curCommand != commands.size() - 1) {
@@ -83,7 +83,7 @@ public static void main(String[] args) {
       FrogCommand cmd = ...
       curCommand++;
       commands.add(cmd);
-      cmd.do();
+      cmd.doit();
     }
 
     //рисуем поле после команды
