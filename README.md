@@ -51,7 +51,7 @@
 
 4 [Коллекции для параллельной работы](https://github.com/netology-code/jd-homeworks/tree/video/concurrent_collections/README.md)
 
-## Блок 2. Блок 2. TDD и DDD
+## Блок 2. TDD и DDD
 
 5 [Методологии разработки](https://github.com/netology-code/jd-homeworks/tree/video/tdd_ddd/README.md)
 
