@@ -39,25 +39,21 @@
 1.4 [Magics, DRY, SOLID](./solid/README.md)
 
 
-# 5. Домашние задания по курсу «Многопоточное и функциональное программирование»
+# 5. Домашние задания по курсу «Многопоточное программирование»
 
 ## Блок 1. Многопоточное программирование
 
-1.1 [Многопоточное (параллельное) программирование. Создание и запуск потоков](https://github.com/netology-code/jd-homeworks/tree/master/multithreading)
+1 [Многопоточное программирование. Работа с потоками](https://github.com/netology-code/jd-homeworks/blob/video/multithreading/README.md)
 
-1.2 [Работа с синхронизацией. Synchronization, wait, notify, sleep, lock](https://github.com/netology-code/jd-homeworks/tree/master/synchronization)
+2 [Работа с синхронизацией](https://github.com/netology-code/jd-homeworks/tree/video/synchronization)
 
-1.3 [Volatile, threadlocal atomics](./volatile/README.md)
+3 [Переменные многопоточной программы](https://github.com/netology-code/jd-homeworks/tree/video/volatile)
 
-1.4 [Коллекции для параллельной (конкурирующей) работы](./concurrent_collections/README.md)
+4 [Коллекции для параллельной работы](https://github.com/netology-code/jd-homeworks/tree/video/concurrent_collections)
 
-1.5 [Клиент-серверное взаимодействие. Blocking и Non-Blocking IO](./clientserver/README.md)
+## Блок 2. Блок 2. TDD и DDD
 
-## Блок 2. Блок 2. Функциональное программирование, TDD и DDD
-
-2.1 [Функциональное программирование](./funcprog/README.md)
-
-2.2 [Методология разработки. TDD, DDD](https://github.com/netology-code/jd-homeworks/tree/master/tdd_ddd)
+5 [Методологии разработки](https://github.com/netology-code/jd-homeworks/tree/video/tdd_ddd)
 
 
 # 6. Домашние задания по курсу «Web, Spring & Spring MVC»
