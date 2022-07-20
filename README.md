@@ -45,15 +45,15 @@
 
 1 [Многопоточное программирование. Работа с потоками](https://github.com/netology-code/jd-homeworks/blob/video/multithreading/README.md)
 
-2 [Работа с синхронизацией](https://github.com/netology-code/jd-homeworks/tree/video/synchronization)
+2 [Работа с синхронизацией](https://github.com/netology-code/jd-homeworks/tree/video/synchronization/README.md)
 
-3 [Переменные многопоточной программы](https://github.com/netology-code/jd-homeworks/tree/video/volatile)
+3 [Переменные многопоточной программы](https://github.com/netology-code/jd-homeworks/tree/video/volatile/README.md)
 
-4 [Коллекции для параллельной работы](https://github.com/netology-code/jd-homeworks/tree/video/concurrent_collections)
+4 [Коллекции для параллельной работы](https://github.com/netology-code/jd-homeworks/tree/video/concurrent_collections/README.md)
 
 ## Блок 2. Блок 2. TDD и DDD
 
-5 [Методологии разработки](https://github.com/netology-code/jd-homeworks/tree/video/tdd_ddd)
+5 [Методологии разработки](https://github.com/netology-code/jd-homeworks/tree/video/tdd_ddd/README.md)
 
 
 # 6. Домашние задания по курсу «Web, Spring & Spring MVC»
