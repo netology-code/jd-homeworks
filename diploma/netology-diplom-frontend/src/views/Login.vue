@@ -41,7 +41,7 @@
 
 
     export default defineComponent({
-        name: 'Login',
+        name: 'LoginComponent',
         components: {
             EInput,
             EButton
