@@ -57,7 +57,10 @@ const uploadFile = (file: any, filename: string) => {
  */
 const downloadFile = (filename: string) => {
     return httpClient.get(
-        `/file?filename=${filename}`
+        `/file?filename=${filename}`,
+        {
+            responseType: 'blob'
+        }
     );
 }
 

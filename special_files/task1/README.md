@@ -7,9 +7,9 @@
 
 Для работы с проектом потребуются вспомогательные библиотеки, поэтому необходимо создать новый проект с использованием сборщика проекта `Gradle` или `Maven`. Далее пропишите зависимости для следующих библиотек: `opencsv`, `json-simple` и `gson`. Ниже приведен пример для сборщика `Gradle`:
 ```gradle
-compile 'com.opencsv:opencsv:5.1'
-compile 'com.googlecode.json-simple:json-simple:1.1.1'
-compile 'com.google.code.gson:gson:2.8.2'
+    implementation group: 'com.opencsv', name: 'opencsv', version: '5.1'
+    implementation group: 'com.googlecode.json-simple', name: 'json-simple', version: '1.1.1'
+    implementation group: 'com.google.code.gson', name: 'gson', version: '2.8.2'
 ```
 В качестве исходной информации создайте файл `data.csv` со следующим содержимым и поместите его в корень созданного проекта:
 ```csv

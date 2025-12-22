@@ -35,7 +35,7 @@
     }
 
     export default defineComponent({
-        name: 'Notifications',
+        name: 'FileNotifications',
         components: {},
         setup() {
             const store = useStore();

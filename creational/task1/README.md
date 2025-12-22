@@ -49,10 +49,10 @@ public class Person {
 
   public String getName() { /*...*/ }
   public String getSurname() { /*...*/ }
-  public int getAge() { /*...*/ }
+  public OptionalInt getAge() { /*...*/ }
   public String getAddress() { /*...*/ }
 
-  public String setAddress(String address) { /*...*/ }
+  public void setAddress(String address) { /*...*/ }
   public void happyBirthday() { /*...*/ }
 
   @Override
